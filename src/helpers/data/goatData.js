@@ -18,7 +18,7 @@ const goats = [
     isBusy: true,
     beardLength: 'longer',
     isFainter: true,
-    imageUrl: 'https://www.washingtonian.com/wp-content/uploads/2017/06/6-30-17-goat-yoga-congressional-cemetery-1.jpg',
+    imageUrl: 'https://scx1.b-cdn.net/csz/news/800/2019/goatscandist.jpg',
     age: 7,
   },
   {
@@ -223,4 +223,12 @@ const goats = [
 
 const getGoats = () => goats;
 
-export default { getGoats };
+const useGoat = (goatId) => {
+  goats.forEach((response) => {
+    if (response.id === goatId) {
+      response.isBusy = true;
+    }
+  });
+};
+
+export default { getGoats, useGoat };
